@@ -36,14 +36,14 @@ import tables.DimensionMap;
 
 @Plugin(
 		type = JEXPlugin.class,
-		name="CTC - Adjust Image Intensities",
-		menuPath="CTC Toolbox",
+		name="Example - Adjust Image Intensities",
+		menuPath="Template Functions",
 		visible=true,
 		description="Adjust image intensities, mapping old min and max to new min and max, respectively."
 		)
-public class CTC_AdjustImage extends JEXPlugin {
+public class Example_AdjustImage extends JEXPlugin {
 
-	public CTC_AdjustImage()
+	public Example_AdjustImage()
 	{}
 	
 	/////////// Define Inputs ///////////

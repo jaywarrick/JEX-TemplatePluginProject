@@ -34,14 +34,14 @@ import function.plugin.mechanism.ParameterMarker;
 
 @Plugin(
 		type = JEXPlugin.class,
-		name="CTC - Split Image",
-		menuPath="CTC Toolbox",
+		name="Example - Split Image",
+		menuPath="Template Functions",
 		visible=true,
 		description="Split and image set along a dimension. (e.g., split multicolor image set into image sets with an individual color)"
 		)
-public class CTC_SplitImage extends JEXPlugin {
+public class Example_SplitImage extends JEXPlugin {
 	
-	public CTC_SplitImage()
+	public Example_SplitImage()
 	{}
 	
 	// ----------------------------------------------------

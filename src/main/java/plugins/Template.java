@@ -1,5 +1,5 @@
 // Define package name as "plugins" as show here
-package function.plugin.mechanism;
+package plugins;
 
 // Import needed classes here 
 import java.util.TreeMap;
@@ -24,7 +24,7 @@ import function.plugin.mechanism.ParameterMarker;
 @Plugin(
 		type = JEXPlugin.class,
 		name="Template Function",
-		menuPath="Templates",
+		menuPath="Template Functions",
 		visible=true,
 		description="Example of a file to define a JEX function/plugin. Doesn't do anything but print the parameters provided by the user."
 		)

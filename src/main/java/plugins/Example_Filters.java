@@ -6,9 +6,10 @@ import ij.process.ImageProcessor;
 
 import java.util.TreeMap;
 
+import jex.statics.JEXStatics;
+
 import org.scijava.plugin.Plugin;
 
-import jex.statics.JEXStatics;
 import tables.DimensionMap;
 import Database.DBObjects.JEXData;
 import Database.DBObjects.JEXEntry;
@@ -34,16 +35,16 @@ import function.plugin.mechanism.ParameterMarker;
 
 @Plugin(
 		type = JEXPlugin.class,
-		name="CTC - Image Filters",
-		menuPath="CTC Toolbox",
+		name="Example - Image Filters",
+		menuPath="Template Functions",
 		visible=true,
 		description="Use a predefined image filter and specify the filter radius."
 		)
-public class CTC_Filters extends JEXPlugin {
+public class Example_Filters extends JEXPlugin {
 	
 	public static String MEAN = "mean", MIN = "min", MAX = "max", MEDIAN = "median", VARIANCE = "variance";
 
-	public CTC_Filters()
+	public Example_Filters()
 	{}
 	
 	/////////// Define Inputs ///////////

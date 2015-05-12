@@ -34,14 +34,14 @@ import tables.DimensionMap;
 
 @Plugin(
 		type = JEXPlugin.class,
-		name="CTC - Export Multiple Table Files",
-		menuPath="CTC Toolbox",
+		name="Example - Export Multiple Table Files",
+		menuPath="Template Functions",
 		visible=true,
 		description="Export multiple files to a folder."
 		)
-public class CTC_ExportMultipleFiles extends JEXPlugin {
+public class Example_ExportMultipleFiles extends JEXPlugin {
 	
-	public CTC_ExportMultipleFiles()
+	public Example_ExportMultipleFiles()
 	{}
 	
 	// ----------------------------------------------------
