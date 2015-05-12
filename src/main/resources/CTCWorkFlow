@@ -1,0 +1,175 @@
+@relation 'Workflow-E:\\CTC Databases\\Testing grounds\\TestNewWorkFlow\\CTCWorkFlow'
+
+@attribute 'Function Name' {'CTC - Adjust Image Intensities','CTC - Auto-Find Image Alignments','CTC - Background Correct (Calibrated)','CTC - Crop Points','CTC - Export Multiple Table Files','CTC - Find Maxima Segmentation','CTC - Image Calculator','CTC - Image Filters','CTC - Import Images (SCIFIO)','CTC - Single Cell Colocalization','CTC - Single Cell Quantification','CTC - Split Image','CTC - Stitch 2 Dims Using Alignments','CTC - Threshold Background Noise'}
+@attribute 'Info Type' {__Inputs__,__Outputs__,__Parameters__,__SavingSelections__}
+@attribute Key {0,1,2,3,'Artificial BG Level','BG Sub. Paraboloid','BG Sub. Presmooth Radius','BG Sub. Radius','Color Dim Name','Color Dim Value','Dim to Split','Est. BG sigma','Exclude Maximima on Edges?','Exclude Segments on Edges?','File 1','File 2','File 3','File 4','File 5','File Extension','File Name Parse Separator','Filter Type','Folder Path',Gamma,'Gather channel names?',Height,'Horizontal Image Alignment','Horizontal Overlap \%','IF-DF Radius','ImCol Dim Name','ImRow Dim Name',Image,'Image A','Image B','Image Col Dim Name','Image Row Dim Name','Image Set','Image To Quantify','Image to Quantify','Image-DF Radius',Images,'Input Directory/File','Intensity Multiplier','Is EDM?','Keep Dim?','Mask Image','Math Operation',Maxima,'Maxima Color Dim Value','Mean, median, or mode?','Median Filter Radius',Method,'Montage Cols','Montage Rows','New Max','New Min','Nominal Value to Add Back','Normalize Intensities Fit Bit Depth','Number of Sigma','Old Max','Old Min','Output Bit Depth','Output Bit-Depth','Output Maxima Only?','Particles Are White?','Pre-Despeckle Radius','Pre-Smoothing Radius',Radius,Scale,'Segmentation Color Dim Value','Segmented Image','Single Threshold per Color?',Threshold,Tolerance,'Vertical Image Alignment','Vertical Overlap \%',Width,'Window Offset'}
+@attribute 'Workflow Index' {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19}
+@attribute Metadata {Value}
+@attribute Value string
+
+@data
+'CTC - Adjust Image Intensities',__Inputs__,Image,16,Value,'Image,Segmented Image,0'
+'CTC - Adjust Image Intensities',__Outputs__,0,16,Value,'Image,Segmented Image (0-1),0'
+'CTC - Adjust Image Intensities',__Parameters__,Gamma,16,Value,1.0
+'CTC - Adjust Image Intensities',__Parameters__,'New Max',16,Value,1
+'CTC - Adjust Image Intensities',__Parameters__,'New Min',16,Value,0.0
+'CTC - Adjust Image Intensities',__Parameters__,'Old Max',16,Value,255
+'CTC - Adjust Image Intensities',__Parameters__,'Old Min',16,Value,0.0
+'CTC - Adjust Image Intensities',__Parameters__,'Output Bit Depth',16,Value,16
+'CTC - Adjust Image Intensities',__SavingSelections__,0,16,Value,true
+'CTC - Auto-Find Image Alignments',__Inputs__,Images,2,Value,'Image,RAW(BG),0'
+'CTC - Auto-Find Image Alignments',__Outputs__,0,2,Value,'Value,Hor. Alignment,0'
+'CTC - Auto-Find Image Alignments',__Outputs__,1,2,Value,'Value,Ver. Alignment,0'
+'CTC - Auto-Find Image Alignments',__Parameters__,'Color Dim Name',2,Value,Color
+'CTC - Auto-Find Image Alignments',__Parameters__,'Color Dim Value',2,Value,1
+'CTC - Auto-Find Image Alignments',__Parameters__,'Horizontal Overlap \%',2,Value,13
+'CTC - Auto-Find Image Alignments',__Parameters__,'ImCol Dim Name',2,Value,ImCol
+'CTC - Auto-Find Image Alignments',__Parameters__,'ImRow Dim Name',2,Value,ImRow
+'CTC - Auto-Find Image Alignments',__Parameters__,'Vertical Overlap \%',2,Value,10
+'CTC - Auto-Find Image Alignments',__SavingSelections__,0,2,Value,true
+'CTC - Auto-Find Image Alignments',__SavingSelections__,1,2,Value,true
+'CTC - Background Correct (Calibrated)',__Inputs__,Images,1,Value,'Image,RAW,0'
+'CTC - Background Correct (Calibrated)',__Outputs__,0,1,Value,'Image,RAW(BG),0'
+'CTC - Background Correct (Calibrated)',__Parameters__,'BG Sub. Paraboloid',1,Value,true
+'CTC - Background Correct (Calibrated)',__Parameters__,'BG Sub. Presmooth Radius',1,Value,3
+'CTC - Background Correct (Calibrated)',__Parameters__,'BG Sub. Radius',1,Value,3
+'CTC - Background Correct (Calibrated)',__Parameters__,'Est. BG sigma',1,Value,50
+'CTC - Background Correct (Calibrated)',__Parameters__,'IF-DF Radius',1,Value,0
+'CTC - Background Correct (Calibrated)',__Parameters__,'Image-DF Radius',1,Value,0
+'CTC - Background Correct (Calibrated)',__Parameters__,'Nominal Value to Add Back',1,Value,100
+'CTC - Background Correct (Calibrated)',__Parameters__,'Output Bit Depth',1,Value,16
+'CTC - Background Correct (Calibrated)',__SavingSelections__,0,1,Value,true
+'CTC - Crop Points',__Inputs__,Image,18,Value,'Image,FINAL (Seg),0'
+'CTC - Crop Points',__Inputs__,Maxima,18,Value,'Roi,Maxima,0'
+'CTC - Crop Points',__Outputs__,0,18,Value,'Image,CELL CROPS,0'
+'CTC - Crop Points',__Outputs__,1,18,Value,'Roi,CELL PTS,0'
+'CTC - Crop Points',__Parameters__,Height,18,Value,75
+'CTC - Crop Points',__Parameters__,Width,18,Value,75
+'CTC - Crop Points',__SavingSelections__,0,18,Value,true
+'CTC - Crop Points',__SavingSelections__,1,18,Value,true
+'CTC - Export Multiple Table Files',__Inputs__,'File 1',19,Value,'File,DAPICK,0'
+'CTC - Export Multiple Table Files',__Inputs__,'File 2',19,Value,'File,DAPI,0'
+'CTC - Export Multiple Table Files',__Inputs__,'File 3',19,Value,'File,Colocalization,0'
+'CTC - Export Multiple Table Files',__Inputs__,'File 4',19,Value,'File,CK,0'
+'CTC - Export Multiple Table Files',__Inputs__,'File 5',19,Value,'File,Thresholds,0'
+'CTC - Export Multiple Table Files',__Parameters__,'File Extension',19,Value,csv
+'CTC - Export Multiple Table Files',__Parameters__,'Folder Path',19,Value,'E:\\CTC Databases\\Testing grounds\\TestNewWorkFlow\\Cell_x0_y0'
+'CTC - Find Maxima Segmentation',__Inputs__,Image,4,Value,'Image,FINAL,0'
+'CTC - Find Maxima Segmentation',__Outputs__,0,4,Value,'Roi,Maxima,0'
+'CTC - Find Maxima Segmentation',__Outputs__,1,4,Value,'File,XY List,0'
+'CTC - Find Maxima Segmentation',__Outputs__,2,4,Value,'File,Counts,0'
+'CTC - Find Maxima Segmentation',__Outputs__,3,4,Value,'Image,Segmented Image,0'
+'CTC - Find Maxima Segmentation',__Parameters__,'Color Dim Name',4,Value,Color
+'CTC - Find Maxima Segmentation',__Parameters__,'Exclude Maximima on Edges?',4,Value,true
+'CTC - Find Maxima Segmentation',__Parameters__,'Exclude Segments on Edges?',4,Value,true
+'CTC - Find Maxima Segmentation',__Parameters__,'Is EDM?',4,Value,false
+'CTC - Find Maxima Segmentation',__Parameters__,'Maxima Color Dim Value',4,Value,2
+'CTC - Find Maxima Segmentation',__Parameters__,'Output Maxima Only?',4,Value,false
+'CTC - Find Maxima Segmentation',__Parameters__,'Particles Are White?',4,Value,true
+'CTC - Find Maxima Segmentation',__Parameters__,'Pre-Despeckle Radius',4,Value,1.7
+'CTC - Find Maxima Segmentation',__Parameters__,'Pre-Smoothing Radius',4,Value,4
+'CTC - Find Maxima Segmentation',__Parameters__,'Segmentation Color Dim Value',4,Value,2
+'CTC - Find Maxima Segmentation',__Parameters__,Threshold,4,Value,10000
+'CTC - Find Maxima Segmentation',__Parameters__,Tolerance,4,Value,50
+'CTC - Find Maxima Segmentation',__SavingSelections__,0,4,Value,true
+'CTC - Find Maxima Segmentation',__SavingSelections__,1,4,Value,true
+'CTC - Find Maxima Segmentation',__SavingSelections__,2,4,Value,true
+'CTC - Find Maxima Segmentation',__SavingSelections__,3,4,Value,true
+'CTC - Image Calculator',__Inputs__,'Image A',11,Value,'Image,THRESH Color 1 (E,D),0'
+'CTC - Image Calculator',__Inputs__,'Image A',17,Value,'Image,FINAL,0'
+'CTC - Image Calculator',__Inputs__,'Image B',11,Value,'Image,THRESH Color 2 (E,D),0'
+'CTC - Image Calculator',__Inputs__,'Image B',17,Value,'Image,Segmented Image (0-1),0'
+'CTC - Image Calculator',__Outputs__,0,11,Value,'Image,Cell Area,0'
+'CTC - Image Calculator',__Outputs__,0,17,Value,'Image,FINAL (Seg),0'
+'CTC - Image Calculator',__Parameters__,'Math Operation',11,Value,OR
+'CTC - Image Calculator',__Parameters__,'Math Operation',17,Value,A+B
+'CTC - Image Calculator',__Parameters__,'Output Bit-Depth',11,Value,8
+'CTC - Image Calculator',__Parameters__,'Output Bit-Depth',17,Value,16
+'CTC - Image Calculator',__SavingSelections__,0,11,Value,true
+'CTC - Image Calculator',__SavingSelections__,0,17,Value,true
+'CTC - Image Filters',__Inputs__,Image,7,Value,'Image,THRESH Color 1,0'
+'CTC - Image Filters',__Inputs__,Image,8,Value,'Image,THRESH Color 1 (E),0'
+'CTC - Image Filters',__Inputs__,Image,9,Value,'Image,THRESH Color 2,0'
+'CTC - Image Filters',__Inputs__,Image,10,Value,'Image,THRESH Color 2 (E),0'
+'CTC - Image Filters',__Outputs__,0,7,Value,'Image,THRESH Color 1 (E),0'
+'CTC - Image Filters',__Outputs__,0,8,Value,'Image,THRESH Color 1 (E,D),0'
+'CTC - Image Filters',__Outputs__,0,9,Value,'Image,THRESH Color 2 (E),0'
+'CTC - Image Filters',__Outputs__,0,10,Value,'Image,THRESH Color 2 (E,D),0'
+'CTC - Image Filters',__Parameters__,'Filter Type',7,Value,min
+'CTC - Image Filters',__Parameters__,'Filter Type',8,Value,max
+'CTC - Image Filters',__Parameters__,'Filter Type',9,Value,min
+'CTC - Image Filters',__Parameters__,'Filter Type',10,Value,max
+'CTC - Image Filters',__Parameters__,'Output Bit-Depth',7,Value,32
+'CTC - Image Filters',__Parameters__,'Output Bit-Depth',8,Value,32
+'CTC - Image Filters',__Parameters__,'Output Bit-Depth',9,Value,32
+'CTC - Image Filters',__Parameters__,'Output Bit-Depth',10,Value,32
+'CTC - Image Filters',__Parameters__,Radius,7,Value,2.0
+'CTC - Image Filters',__Parameters__,Radius,8,Value,2.0
+'CTC - Image Filters',__Parameters__,Radius,9,Value,2.0
+'CTC - Image Filters',__Parameters__,Radius,10,Value,2.0
+'CTC - Image Filters',__SavingSelections__,0,7,Value,true
+'CTC - Image Filters',__SavingSelections__,0,8,Value,true
+'CTC - Image Filters',__SavingSelections__,0,9,Value,true
+'CTC - Image Filters',__SavingSelections__,0,10,Value,true
+'CTC - Import Images (SCIFIO)',__Outputs__,0,0,Value,'Image,RAW,0'
+'CTC - Import Images (SCIFIO)',__Parameters__,'File Extension',0,Value,tif
+'CTC - Import Images (SCIFIO)',__Parameters__,'File Name Parse Separator',0,Value,_
+'CTC - Import Images (SCIFIO)',__Parameters__,'Gather channel names?',0,Value,false
+'CTC - Import Images (SCIFIO)',__Parameters__,'Input Directory/File',0,Value,'E:\\CTC Databases\\Testing grounds\\Pt211\\Cell_x0_y0\\Image-image'
+'CTC - Import Images (SCIFIO)',__Parameters__,'Montage Cols',0,Value,1
+'CTC - Import Images (SCIFIO)',__Parameters__,'Montage Rows',0,Value,1
+'CTC - Import Images (SCIFIO)',__SavingSelections__,0,0,Value,true
+'CTC - Single Cell Colocalization',__Inputs__,'Image to Quantify',15,Value,'Image,FINAL,0'
+'CTC - Single Cell Colocalization',__Inputs__,'Mask Image',15,Value,'Image,Cell Area,0'
+'CTC - Single Cell Colocalization',__Inputs__,Maxima,15,Value,'Roi,Maxima,0'
+'CTC - Single Cell Colocalization',__Inputs__,'Segmented Image',15,Value,'Image,Segmented Image,0'
+'CTC - Single Cell Colocalization',__Outputs__,0,15,Value,'File,Colocalization,0'
+'CTC - Single Cell Colocalization',__Parameters__,'Artificial BG Level',15,Value,0
+'CTC - Single Cell Colocalization',__Parameters__,'Color Dim Name',15,Value,Color
+'CTC - Single Cell Colocalization',__Parameters__,'Median Filter Radius',15,Value,0
+'CTC - Single Cell Colocalization',__Parameters__,Method,15,Value,Min-Contain
+'CTC - Single Cell Colocalization',__Parameters__,'Window Offset',15,Value,''
+'CTC - Single Cell Colocalization',__SavingSelections__,0,15,Value,true
+'CTC - Single Cell Quantification',__Inputs__,'Image To Quantify',12,Value,'Image,FINAL,0'
+'CTC - Single Cell Quantification',__Inputs__,'Image To Quantify',13,Value,'Image,FINAL,0'
+'CTC - Single Cell Quantification',__Inputs__,'Image To Quantify',14,Value,'Image,FINAL,0'
+'CTC - Single Cell Quantification',__Inputs__,'Mask Image',12,Value,'Image,THRESH Color 1 (E,D),0'
+'CTC - Single Cell Quantification',__Inputs__,'Mask Image',13,Value,'Image,THRESH Color 2 (E,D),0'
+'CTC - Single Cell Quantification',__Inputs__,'Mask Image',14,Value,'Image,Cell Area,0'
+'CTC - Single Cell Quantification',__Inputs__,Maxima,12,Value,'Roi,Maxima,0'
+'CTC - Single Cell Quantification',__Inputs__,Maxima,13,Value,'Roi,Maxima,0'
+'CTC - Single Cell Quantification',__Inputs__,Maxima,14,Value,'Roi,Maxima,0'
+'CTC - Single Cell Quantification',__Inputs__,'Segmented Image',12,Value,'Image,Segmented Image,0'
+'CTC - Single Cell Quantification',__Inputs__,'Segmented Image',13,Value,'Image,Segmented Image,0'
+'CTC - Single Cell Quantification',__Inputs__,'Segmented Image',14,Value,'Image,Segmented Image,0'
+'CTC - Single Cell Quantification',__Outputs__,0,12,Value,'File,DAPI,0'
+'CTC - Single Cell Quantification',__Outputs__,0,13,Value,'File,CK,0'
+'CTC - Single Cell Quantification',__Outputs__,0,14,Value,'File,DAPICK,0'
+'CTC - Single Cell Quantification',__SavingSelections__,0,12,Value,true
+'CTC - Single Cell Quantification',__SavingSelections__,0,13,Value,true
+'CTC - Single Cell Quantification',__SavingSelections__,0,14,Value,true
+'CTC - Split Image',__Inputs__,Image,6,Value,'Image,THRESH,0'
+'CTC - Split Image',__Parameters__,'Dim to Split',6,Value,Color
+'CTC - Split Image',__Parameters__,'Keep Dim?',6,Value,false
+'CTC - Stitch 2 Dims Using Alignments',__Inputs__,'Horizontal Image Alignment',3,Value,'Value,Hor. Alignment,0'
+'CTC - Stitch 2 Dims Using Alignments',__Inputs__,'Image Set',3,Value,'Image,RAW(BG),0'
+'CTC - Stitch 2 Dims Using Alignments',__Inputs__,'Vertical Image Alignment',3,Value,'Value,Ver. Alignment,0'
+'CTC - Stitch 2 Dims Using Alignments',__Outputs__,0,3,Value,'Image,FINAL,0'
+'CTC - Stitch 2 Dims Using Alignments',__Parameters__,'Image Col Dim Name',3,Value,ImCol
+'CTC - Stitch 2 Dims Using Alignments',__Parameters__,'Image Row Dim Name',3,Value,ImRow
+'CTC - Stitch 2 Dims Using Alignments',__Parameters__,'Intensity Multiplier',3,Value,1
+'CTC - Stitch 2 Dims Using Alignments',__Parameters__,'Normalize Intensities Fit Bit Depth',3,Value,false
+'CTC - Stitch 2 Dims Using Alignments',__Parameters__,'Output Bit Depth',3,Value,16
+'CTC - Stitch 2 Dims Using Alignments',__Parameters__,Scale,3,Value,1.0
+'CTC - Stitch 2 Dims Using Alignments',__SavingSelections__,0,3,Value,true
+'CTC - Threshold Background Noise',__Inputs__,Image,5,Value,'Image,FINAL,0'
+'CTC - Threshold Background Noise',__Outputs__,0,5,Value,'Image,THRESH,0'
+'CTC - Threshold Background Noise',__Outputs__,1,5,Value,'File,Thresholds,0'
+'CTC - Threshold Background Noise',__Outputs__,2,5,Value,'File,Thresholds,0'
+'CTC - Threshold Background Noise',__Parameters__,'Color Dim Name',5,Value,Color
+'CTC - Threshold Background Noise',__Parameters__,'Mean, median, or mode?',5,Value,Mode
+'CTC - Threshold Background Noise',__Parameters__,'Number of Sigma',5,Value,4
+'CTC - Threshold Background Noise',__Parameters__,'Single Threshold per Color?',5,Value,false
+'CTC - Threshold Background Noise',__SavingSelections__,0,5,Value,true
+'CTC - Threshold Background Noise',__SavingSelections__,1,5,Value,true
+'CTC - Threshold Background Noise',__SavingSelections__,2,5,Value,true
